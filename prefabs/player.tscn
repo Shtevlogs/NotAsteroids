@@ -13,5 +13,4 @@ script = ExtResource("1_4dohe")
 [node name="Rotor" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Rotor"]
-scale = Vector2(3, 3)
 texture = SubResource("AtlasTexture_yqjtg")

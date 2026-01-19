@@ -15,6 +15,14 @@ run/main_scene="uid://bry0lpc60nxus"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=480
+window/stretch/mode="viewport"
+window/stretch/scale=3.0
+window/stretch/scale_mode="integer"
+
 [input]
 
 left={
