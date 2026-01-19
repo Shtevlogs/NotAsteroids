@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbxtdwcguixrg"]
+
+[ext_resource type="Script" uid="uid://ro0gmjk5o0it" path="res://scripts/entities/asteroid.gd" id="1_p7sdv"]
+[ext_resource type="Texture2D" uid="uid://de1ivxju3hpxv" path="res://sprites.png" id="2_mp1fi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p57ef"]
+atlas = ExtResource("2_mp1fi")
+region = Rect2(24, 0, 24, 24)
+
+[node name="Asteroid" type="Node2D"]
+script = ExtResource("1_p7sdv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = SubResource("AtlasTexture_p57ef")

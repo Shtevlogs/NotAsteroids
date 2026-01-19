@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bp8dcchi6j6yk"]
+
+[ext_resource type="Script" uid="uid://bfwmaffurd335" path="res://scripts/game.gd" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://cc70y716ajxh" path="res://scripts/wrapped_position_manager.gd" id="2_yqjtg"]
+[ext_resource type="Script" uid="uid://c5370r4sy3bss" path="res://scripts/asteroid_spawn_manager.gd" id="3_lnu2h"]
+[ext_resource type="Script" uid="uid://60keufttmvbt" path="res://scripts/blast_manager.gd" id="4_lbhrr"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_uwrxv")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="WrappedPositionManager" type="Node" parent="."]
+script = ExtResource("2_yqjtg")
+
+[node name="AsteroidSpawnManager" type="Node" parent="."]
+script = ExtResource("3_lnu2h")
+
+[node name="BlastManager" type="Node" parent="."]
+script = ExtResource("4_lbhrr")
