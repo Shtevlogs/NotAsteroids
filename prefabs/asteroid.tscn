@@ -1,14 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbxtdwcguixrg"]
+[gd_scene load_steps=2 format=3 uid="uid://dbxtdwcguixrg"]
 
 [ext_resource type="Script" uid="uid://ro0gmjk5o0it" path="res://scripts/entities/asteroid.gd" id="1_p7sdv"]
-[ext_resource type="Texture2D" uid="uid://de1ivxju3hpxv" path="res://sprites.png" id="2_mp1fi"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p57ef"]
-atlas = ExtResource("2_mp1fi")
-region = Rect2(24, 0, 24, 24)
 
 [node name="Asteroid" type="Node2D"]
 script = ExtResource("1_p7sdv")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("AtlasTexture_p57ef")
+[node name="Polygon2D" type="Polygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(-4, 4, -5, 1, -5, -3, -2, -5, 1, -5, 3, -3, 3, 1, 1, 4)
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(-3, 4, -4, -1, -3, -5, 0, -6, 6, -6, 7, -3, 6, 3, 2, 7)
+
+[node name="Polygon2D3" type="Polygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(-8, 10, -11, 1, -6, -8, 3, -10, 10, -8, 12, 4, 7, 11, -1, 11)

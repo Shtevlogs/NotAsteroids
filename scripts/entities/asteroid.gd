@@ -1,17 +1,17 @@
 class_name Asteroid
 extends Node2D
 
-@onready var sprite: Sprite2D = $Sprite2D
-
-const SPRITE_OFFSETS : Array[float] = [24, 48, 72]
+@onready var polygons : Array[Polygon2D] = [
+    $Polygon2D,
+    $Polygon2D2,
+    $Polygon2D3
+]
 
 var state : AsteroidState
 
 func _ready() -> void:
     state.destroyed.connect(_on_destroy)
-    sprite.texture = sprite.texture.duplicate()
-    var atlas_texture := sprite.texture as AtlasTexture
-    atlas_texture.region.position.x = SPRITE_OFFSETS[state.power]
+    polygons[state.power].visible = true
 
 func _process(delta: float) -> void:
     # Update state
